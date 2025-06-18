@@ -2,9 +2,9 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import chalk from 'chalk';
-const http = require('http');
+const http = import('http');
 const port = process.env.PORT || 5000
-const app = require('./app');
+const app = import('./app');
 const server = http.createServer(app)
 
 // --- CONFIGURATION ---
