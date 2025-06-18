@@ -3,6 +3,8 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import chalk from 'chalk';
 
+const port = process.env.PORT || 4000 
+
 // --- CONFIGURATION ---
 const ROBLOX_RELEASE_NOTES_URL = 'https://create.roblox.com/docs/en-us/release-notes/release-notes-664';
 const TARGET_TEXT_FRAGMENT = 'A Players capability is introduced as required for Players service';
