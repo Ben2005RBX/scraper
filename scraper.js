@@ -2,8 +2,10 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import chalk from 'chalk';
-
-const port = process.env.PORT || 4000 
+const http = require('http');
+const port = process.env.PORT || 5000
+const app = require('./app');
+const server = http.createServer(app)
 
 // --- CONFIGURATION ---
 const ROBLOX_RELEASE_NOTES_URL = 'https://create.roblox.com/docs/en-us/release-notes/release-notes-664';
@@ -11,6 +13,11 @@ const TARGET_TEXT_FRAGMENT = 'A Players capability is introduced as required for
 const CHECK_INTERVAL_MS = 60000;
 const WEBHOOK_URL = process.env.URL
 const USER_ID_TO_PING = '472385006665465857';
+
+
+server.listen(port, () =>{
+  console.log('port started on ${port}')
+});
 
 // State variable to prevent spamming the webhook
 let notificationSent = false;
