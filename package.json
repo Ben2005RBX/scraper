@@ -4,15 +4,17 @@
   "main": "scraper.js",
   "type": "module",
   "scripts": {
+    "start": "node scraper.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Roblox Update Scraper with HTTP Server",
   "dependencies": {
     "axios": "^1.10.0",
     "chalk": "^5.4.1",
-    "cheerio": "^1.1.0"
+    "cheerio": "^1.1.0",
+    "express": "^4.18.2"
   }
 }
