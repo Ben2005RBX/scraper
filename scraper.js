@@ -1,11 +1,9 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import chalk from 'chalk';
-import http from 'http'; // Changed from dynamic import
-import app from './app.js'; // Changed from dynamic import
 
-const port = process.env.PORT || 5000;
-const server = http.createServer(app);
+import express from 'express';
+const app = express();
 
 // --- CONFIGURATION ---
 const ROBLOX_RELEASE_NOTES_URL = 'https://create.roblox.com/docs/en-us/release-notes/release-notes-664';
@@ -14,8 +12,10 @@ const CHECK_INTERVAL_MS = 60000;
 const WEBHOOK_URL = process.env.URL;
 const USER_ID_TO_PING = process.env.ID;
 
-server.listen(port, () => {
-  console.log(`Port started on ${port}`); // Fixed template string
+const port = process.env.PORT || 4000;
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
 
 // State variable to prevent spamming the webhook
