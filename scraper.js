@@ -9,8 +9,7 @@ const port = process.env.PORT || 4000
 const ROBLOX_RELEASE_NOTES_URL = 'https://create.roblox.com/docs/en-us/release-notes/release-notes-664';
 const TARGET_TEXT_FRAGMENT = 'A Players capability is introduced as required for Players service';
 const CHECK_INTERVAL_MS = 60000;
-
-const WEBHOOK_URL = 'https://discord.com/api/webhooks/1384863147013443604/yPLFsd65-UeDsxH7IytITgqz8K0jNP-gLnXXy9UzfL5e8d0mXNvyow07g4yMzhCJSwnW';
+const WEBHOOK_URL = process.env.URL
 const USER_ID_TO_PING = '472385006665465857';
 
 // State variable to prevent spamming the webhook
