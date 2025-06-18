@@ -8,8 +8,8 @@ const ROBLOX_RELEASE_NOTES_URL = 'https://create.roblox.com/docs/en-us/release-n
 const TARGET_TEXT_FRAGMENT = 'A Players capability is introduced as required for Players service';
 const CHECK_INTERVAL_MS = 60000;
 
-const WEBHOOK_URL = 'YOUR_DISCORD_WEBHOOK_URL';
-const USER_ID_TO_PING = 'YOUR_DISCORD_USER_ID';
+const WEBHOOK_URL = 'https://discord.com/api/webhooks/1384863147013443604/yPLFsd65-UeDsxH7IytITgqz8K0jNP-gLnXXy9UzfL5e8d0mXNvyow07g4yMzhCJSwnW';
+const USER_ID_TO_PING = '472385006665465857';
 
 // State variable to prevent spamming the webhook
 let notificationSent = false;
